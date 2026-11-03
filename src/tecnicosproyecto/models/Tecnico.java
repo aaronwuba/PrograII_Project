@@ -14,9 +14,7 @@ public class Tecnico {
     private String especialidad;
     private String contacto;
     private String estado;
-
     public Tecnico() {}
-
     public Tecnico(int id, String nombre, String especialidad, String contacto, String estado) {
         this.id = id;
         this.nombre = nombre;
@@ -24,7 +22,6 @@ public class Tecnico {
         this.contacto = contacto;
         this.estado = estado;
     }
-
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
