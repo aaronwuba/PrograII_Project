@@ -1,0 +1,43 @@
+TALLER MECANICO - PROYECTO INTEGRADO
+===================================
+
+REQUISITOS: JDK 17 o superior, Apache NetBeans con soporte Ant.
+
+ABRIR:
+1. Descomprimir este ZIP.
+2. NetBeans > Archivo > Abrir proyecto > carpeta TallerMecanico_Integrado.
+3. Ejecutar proyecto (Ant target run). Clase principal: tallermecanico.App.
+4. Alternativa en terminal dentro de la carpeta: ant run.
+
+MODULOS EN LA INTERFAZ:
+Clientes, Ordenes de servicio, Vehiculos, Tecnicos, Servicios, Pagos, Citas y Reportes.
+La interfaz guarda sus datos localmente en ~/taller_alejandro_datos.ser.
+No requiere MySQL para usar estas pantallas. Los clientes y ordenes
+conservan la interfaz original del modulo aportado.
+
+CODIGO ORIGINAL CONSERVADO:
+- Clientes.java, Ordendeservicio.java, App.java (integrado)
+- Vehiculos.java y Pago.java (Aaron)
+- models/Servicio.java y DAO/ServicioDAO.java (Esteban)
+- tecnicosproyecto/models/Tecnico.java y DAO/TecnicoDAO.java
+- Citas.java, OperacionesCitas.java, OperacionesReportes.java
+
+IMPORTANTE:
+Los DAO originales de citas, tecnicos y servicios usan MySQL y se incluyen
+como codigo de integracion, pero NO estan conectados a las pantallas locales.
+Para usarlos con MySQL hace falta configurar servidor, esquema y driver JDBC.
+La interfaz integrada usa almacenamiento local, no sincroniza con MySQL.
+
+VERIFICACION:
+El proyecto fue compilado con JDK 21 y Ant. No se ha probado la
+interaccion grafica en NetBeans ni una conexion MySQL real.
+
+ACTUALIZACIÓN - MÓDULO DE VIANNY
+Se añadió el formulario InicioSesion.java y su archivo .form para editarlo en NetBeans.
+Al ejecutar el proyecto aparece el inicio de sesión.
+Credenciales definidas en el aporte original:
+Administrador: admin / 4321
+Operativo: Trabajador / 8765
+Ambos usuarios acceden actualmente a la aplicación integrada. Los permisos diferenciados por rol no están implementados.
+El archivo original Vehiculos.java de Vianny se conserva en aportes_originales/Vianny para evitar sobrescribir el módulo de vehículos existente.
+Este proyecto utiliza almacenamiento local; no requiere conexión MySQL para abrir la interfaz.
