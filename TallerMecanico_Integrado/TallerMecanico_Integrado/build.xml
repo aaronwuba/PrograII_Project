@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TallerMecanico_Integrado" default="run" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build/classes"/>
+    <target name="clean"><delete dir="build"/></target>
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" encoding="UTF-8" source="17" target="17"/>
+    </target>
+    <target name="run" depends="compile">
+        <java classname="tallerautomotriz.TallerAutomotriz" fork="true" failonerror="true">
+            <classpath><pathelement path="${build.dir}"/></classpath>
+        </java>
+    </target>
+    <target name="jar" depends="compile">
+        <mkdir dir="dist"/>
+        <jar destfile="dist/TallerMecanico_Integrado.jar" basedir="${build.dir}">
+            <manifest><attribute name="Main-Class" value="tallerautomotriz.TallerAutomotriz"/></manifest>
+        </jar>
+    </target>
+</project>
